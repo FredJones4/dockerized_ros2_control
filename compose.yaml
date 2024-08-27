@@ -1,5 +1,5 @@
 services:
-  rosflight_demo:
+  dean_Christian_summer2024:
 
     # Build image from dockerfile
     build:
@@ -24,11 +24,11 @@ services:
       - /dev:/dev
       # Mount files necessary for displaying graphics on X11 (UNCOMMENT FOR GUIs)
       - /tmp/.X11-unix:/tmp/.X11-unix:rw
-      - ${XAUTHORITY:-$HOME/.Xauthority}:/root/.Xauthority
+      - ${XAUTHORITY:-$HOME/.Xauthority}:/root/.Xauthority 
 
     # Set environment variables needed for displaying graphics (UNCOMMENT FOR GUIs)
 #    environment:
-      - DISPLAY=${DISPLAY}
+      - DISPLAY #=${DISPLAY} # Remove space too to use this commented out part
       - QT_X11_NO_MITSHM=1
 
     # Give sudo access for USB devices and graphics (UNCOMMENT FOR GUIs OR USB ACCESS)
