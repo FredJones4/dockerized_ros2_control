@@ -94,3 +94,14 @@ sudo docker run dean_Christian_summer2024
 ```
 
 **TODO: confirm correct usage of Step 3.**
+
+
+
+
+# Resources
+https://docs.rosflight.org/git-main/user-guide/ros2-setup/#using-a-docker-container-to-run-ros2:~:text=To%20give%20access%20to%20the%20host%27s%20windowing%20system%2C%20use%20the%20following%20commands.%20Note%20that%20the%20base%20Docker%20image%20is%20osrf/ros%3Ahumble%2Ddesktop%2Dfull%2C%20as%20ros%3Ahumble%20doesn%27t%20include%20GUI%20tools%20in%20the%20image.%20Also%2C%20xhost%20%2Blocal%3Aroot%20needs%20to%20be%20run%20once%20per%20login%20session%20and%20is%20not%20persistent 
+
+https://github.com/byu-magicc/docker-ros-demo
+
+https://roboticseabass.com/2021/04/21/docker-and-ros/ 
+
