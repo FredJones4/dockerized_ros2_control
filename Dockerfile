@@ -89,41 +89,7 @@ RUN git clone https://github.com/FredJones4/testMavlink.git
 
 RUN pip3 install kconfiglib
 
-# There are currently issues running PX4 and Gazebo in this. I'm wondering if it's an issue with the bash install command.
-# Oh. I forgot to do the bash, right?
-# Yep.
-# Current container: 3ee37b7cad5d
-
-# TODO: AFTER Whatever way I figure out how to "restart" the image right here in command line,
-# RUN cd PX4-Autopilot
-# RUN make px4_sitl
-# RUN cd ..
-
-# TODO: set up Container access to x11 stuff on the everything
-# apt-get update && apt-get install -y x11-apps
-
 # Q Ground Control
-# Failed version 1:
-# RUN sudo apt-get update
-# RUN sudo apt-get install -y build-essential cmake qt5-default libqt5webkit5-dev
-
-# Paused Version 2:
-# RUN git clone --recursive -j8 https://github.com/mavlink/qgroundcontrol.git
-# RUN cd qgroundcontrol
-# RUN git submodule update --recursive
-# RUN cd ..
-
-
-### Version 3 -- works, but still needs image (x11?) import work
-# root@3ee37b7cad5d:/# ./QGroundControl.AppImage 
-# qt.qpa.xcb: could not connect to display 
-# qt.qpa.plugin: Could not load the Qt platform plugin "xcb" in "" even though it was found.
-# This application failed to start because no Qt platform plugin could be initialized. Reinstalling the application may fix this problem.
-
-# Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, vnc, wayland-egl, wayland, wayland-xcomposite-egl, wayland-xcomposite-glx, xcb.
-
-# Aborted
-# root@3ee37b7cad5d:/#
 RUN sudo apt-get update
 RUN sudo apt-get install wget
 RUN wget https://d176tv9ibo4jno.cloudfront.net/latest/QGroundControl.AppImage
@@ -132,7 +98,7 @@ RUN chmod +x QGroundControl.AppImage
 
 # Install Christian Hales's ROS 2 PX4 Interface code.
 RUN git clone https://github.com/FredJones4/vtol_ctrl_ros2.git
-# Just because it's a nice tool, and the Linux version will be ready soon enough, I'll add my database item.
+# Because it's a helpful tool, and it works on all 3 main OSs (Windows, MacOS, Ubuntu), I'll add my database item.
 RUN git clone https://github.com/FredJones4/servo_db_acess.git
 
 
